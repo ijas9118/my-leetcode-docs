@@ -1,4 +1,11 @@
-[🔗 Problem link](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)
+## Metadata
+
+| Field             | Value                                                                                                      |
+| ----------------- | ---------------------------------------------------------------------------------------------------------- |
+| Problem           | [167. Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) |
+| Data Structure(s) | Arrays                                                                                                     |
+| Difficulty        | 🟧 Medium                                                                                                  |
+| Pattern           | Two Pointers                                                                                               |
 
 ### 1. Problem Summary
 

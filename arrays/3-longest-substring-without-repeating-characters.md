@@ -1,4 +1,11 @@
-[🔗 Problem link](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)
+## Metadata
+
+| Field             | Value                                                                                                                              |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Problem           | [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) |
+| Data Structure(s) | Arrays                                                                                                                             |
+| Difficulty        | 🟧 Medium                                                                                                                          |
+| Pattern           | Sliding Window                                                                                                                     |
 
 ### 1. Problem Summary
 

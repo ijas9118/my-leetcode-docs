@@ -1,9 +1,11 @@
 ## Metadata
 
-- Problem: [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)
-- Data-structure: Hashmap
-- Difficulty: 🟩 Easy
-- Pattern: nil
+| Field             | Value                                                              |
+| ----------------- | ------------------------------------------------------------------ |
+| Problem           | [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/) |
+| Data Structure(s) | Hashmap                                                            |
+| Difficulty        | 🟩 Easy                                                            |
+| Pattern           | nil                                                                |
 
 ### 1. Problem Summary
 

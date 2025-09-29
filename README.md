@@ -12,7 +12,7 @@ This repo is meant to serve as a quick reference for problem-solving patterns an
 
 # Table of Contents
 
-## 🔹 Arrays
+## 🔹 Arrays & Hashmap
 
 ### 🔸 Binary Search
 
@@ -29,9 +29,10 @@ This repo is meant to serve as a quick reference for problem-solving patterns an
 - [167. Two Sum II - Input Array Is Sorted](./arrays/two-pointers/167-two-sum-II.md)
 - [349. Intersection of Two Arrays](./arrays/two-pointers/349-intersection-of-two-arrays.md)
 
-## 🔹 Hashmap
+### 🔸 Hashmap
 
 - [242. Valid Anagram](./hashmap/242-valid-anagram.md)
+
 
 ## 🔹 Stack
 

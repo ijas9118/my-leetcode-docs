@@ -1,59 +1,103 @@
-## Metadata
+# Metadata
 
-| Field             | Value                                                                                                      |
-| ----------------- | ---------------------------------------------------------------------------------------------------------- |
-| Problem           | [167. Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) |
-| Data Structure(s) | Arrays                                                                                                     |
-| Difficulty        | 🟧 Medium                                                                                                  |
-| Pattern           | Two Pointers                                                                                               |
+<table>
+  <tr>
+   <td>Problem
+   </td>
+   <td><a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/">167. Two Sum II - Input Array Is Sorted</a>
+   </td>
+  </tr>
+  <tr>
+   <td>Topics
+   </td>
+   <td>Array, Two pointers
+   </td>
+  </tr>
+  <tr>
+   <td>Difficulty
+   </td>
+   <td>🟧 Medium
+   </td>
+  </tr>
+  <tr>
+   <td>Date
+   </td>
+   <td>05 January 2026
+   </td>
+  </tr>
+</table>
 
-### 1. Problem Summary
+## Idea
 
-- We have to find the first pair of numbers in a sorted array (1-indexed) whose sum equals the given target.
-- Should do with constant space complexity.
+The array is already sorted, and this is the key insight your solution uses.
 
-### 2. Examples / Edge Cases
+You place:
 
-- [1, 3, 4, 5, 7, 10, 11], target = 9
-  - Output: [3, 4]
+- one pointer (left) at the start of the array
 
-### 3. My Thought Process
+- another pointer (right) at the end of the array
 
-- Initially I thought of using hashmap and storing the complement of the element while iterating the array. But realised, need O(1) space.
-- Array is sorted, so we can advantage of that. Two pointers mechanism, one at the beginning and the other at the end.
-  - Find the sum of the elements pointed by the pointer.
-  - If greater than target, decrease 2nd pointer, else increase 1st pointer.
+At each step:
 
-### 4. Solution
+1. Add the two numbers pointed to by left and right.
 
-- Pseudocode
-  1. Set i = 0, j = last index.
-  2. take the sum of both elements
-  3. If sum > target ⇒ j = j - 1
-  4. else i = i + 1
-  5. Return [i + 1, j + 1] when sum = target
-- Final Code
+2. If the sum matches the target → you’ve found the answer.
 
-  ```js
-  var twoSum = function (numbers, target) {
-    let i = 0,
-      j = numbers.length - 1;
+3. If the sum is too small, move the left pointer to the right to increase the sum.
 
-    while (i < j) {
-      let sum = numbers[i] + numbers[j];
-      if (sum === target) {
-        return [i + 1, j + 1];
-      }
-      if (sum > target) {
-        j--;
-      } else {
-        i++;
-      }
-    }
-  };
-  ```
+4. If the sum is too large, move the right pointer to the left to decrease the sum.
 
-### 5. Complexity Analysis
+Since the array is sorted, moving the pointers in this direction always brings the sum closer to the target.
 
-- Time Complexity: O(n)
-- Space Complexity: O(1)
+Each pointer only moves in one direction, so every element is checked at most once.
+
+This makes the solution both efficient and simple.
+
+## Solution Code
+
+```ts
+function twoSum(numbers: number[], target: number): number[] {
+  let left = 0;
+  let right = numbers.length - 1;
+
+  while (left < right) {
+    let sum = numbers[left] + numbers[right];
+
+    if (sum === target) return [left + 1, right + 1];
+
+    if (sum < target) left++;
+    else right--;
+  }
+
+  return [-1, -1];
+}
+```
+
+## Complexity Analysis
+
+<table>
+  <tr>
+   <td><strong>Approach</strong>
+   </td>
+   <td><strong>Best TC</strong>
+   </td>
+   <td><strong>Average TC</strong>
+   </td>
+   <td><strong>Worst TC</strong>
+   </td>
+   <td><strong>Space Complexity</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Two Pointers (Sorted)
+   </td>
+   <td>O(1)
+   </td>
+   <td>O(n)
+   </td>
+   <td>O(n)
+   </td>
+   <td>O(1)
+   </td>
+  </tr>
+</table>
